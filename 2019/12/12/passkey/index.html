@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Passkey Idiom | Hexo</title>
+  <title>passkey | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Passkey Idiom">
+  <meta name="description" content="title: “Passkey Idiom” Consider this situation: People has some sensitve information like SSN, credit card info, and chat record. We definitely would store these information as private members. 12345">
+<meta property="og:type" content="article">
+<meta property="og:title" content="passkey">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;passkey&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: “Passkey Idiom” Consider this situation: People has some sensitve information like SSN, credit card info, and chat record. We definitely would store these information as private members. 12345">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-12-13T04:10:39.000Z">
-<meta property="article:modified_time" content="2019-12-13T04:11:03.223Z">
+<meta property="article:published_time" content="2019-12-13T05:44:34.520Z">
+<meta property="article:modified_time" content="2019-12-13T05:44:34.520Z">
 <meta property="article:author" content="Zephyros">
-<meta property="article:tag" content="Coding">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -150,20 +151,27 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Passkey Idiom
+      passkey
     </h1>
   
 
         
         <a href="/2019/12/12/passkey/" class="archive-article-date">
-  	<time datetime="2019-12-13T04:10:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
+  	<time datetime="2019-12-13T05:44:34.520Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<p>title: “Passkey Idiom”</p>
+<p>Consider this situation: People has some sensitve information like SSN, credit card info, and chat record. We definitely would store these information as private members.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">GetSSN</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">GetCreditCard</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">GetChatRecord</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="built_in">string</span> SSN_;</span><br><span class="line">    <span class="built_in">string</span> credit_card_;</span><br><span class="line">    <span class="built_in">string</span> chat_record_;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Goverment</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">PrintSSN</span><span class="params">(<span class="keyword">const</span> Person &amp;p)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; p.GetSSN();    <span class="comment">// compile error</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Amazon</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ChargeCreditCard</span><span class="params">(<span class="keyword">const</span> Person &amp;p)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; p.GetCreditCard();    <span class="comment">// compile error</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The goverment need to access the everyone’s ssn, and the amazon want to acess people’s credit card information for on-line shopping. We can make the goverment and amazon as friend class of Person. While the drawback is that the goverment also get people’s private information like credit card and chat record, so do Amazon. That’s what we don’t wanna see.</p>
+<p>date: 2019-12-12 20:10:39<br>tags: Coding<br>—mZ</p>
+
       
 
       
@@ -171,17 +179,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Coding</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -362,10 +359,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Coding</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
