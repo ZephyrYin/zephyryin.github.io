@@ -189,7 +189,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2024-04-11 22:26:11" itemprop="dateCreated datePublished" datetime="2024-04-11T22:26:11-07:00">2024-04-11</time>
+      <time title="Created: 2024-04-11 23:42:16" itemprop="dateCreated datePublished" datetime="2024-04-11T23:42:16-07:00">2024-04-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -211,8 +211,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>“Also, the performance gain might not be as large as expected; there’s an inherent overhead associated with launching a thread, because the OS has to allocate the associated kernel resources and stack space and then add the new thread to the scheduler, all of which takes time. If the task being run on the thread is completed quickly, the actual time taken by the task may be dwarfed by the overhead of launching the thread, possibly making the overall performance of the application worse than if the task had been executed directly by the spawning thread.”</p>
+          <p>Don’t parallize short tasks</p>
+<blockquote>
+<p>“Also, the performance gain might not be as large as expected; there’s an inherent overhead associated with launching a thread, because the OS has to allocate the associated kernel resources and stack space and then add the new thread to the scheduler, all of which takes time. If the task being run on the thread is completed quickly, the actual time taken by the task may be dwarfed by the overhead of launching the thread, possibly making the overall performance of the application worse than if the task had been executed directly by the spawning thread.”</p>
+</blockquote>
+<p>The thread pool size should not exceed NumCPUs()</p>
+<blockquote>
 <p>“Finally, the more threads you have running, the more context switching the operating system has to do. Each context switch takes time that could be spent doing useful work, so at some point adding an extra thread will actually reduce the overall application performance rather than increase it. For this reason, if you’re trying to achieve the best possible performance of the system, it’s necessary to adjust the number of threads running to take account of the available hardware concurrency (or lack of it).”</p>
+</blockquote>
 
       
     </div>
