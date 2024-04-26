@@ -160,7 +160,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/c++-concurrentcy-in-action/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/25/c++-concurrentcy-in-action/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.gif">
@@ -178,7 +178,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/11/c++-concurrentcy-in-action/" class="post-title-link" itemprop="url">C++ Concurrency in Action</a>
+          <a href="/2024/04/25/c++-concurrentcy-in-action/" class="post-title-link" itemprop="url">C++ Concurrency in Action</a>
         </h2>
 
         <div class="post-meta-container">
@@ -189,7 +189,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2024-04-11 23:42:16" itemprop="dateCreated datePublished" datetime="2024-04-11T23:42:16-07:00">2024-04-11</time>
+      <time title="Created: 2024-04-25 22:46:19" itemprop="dateCreated datePublished" datetime="2024-04-25T22:46:19-07:00">2024-04-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -218,6 +218,10 @@
 <p>The thread pool size should not exceed NumCPUs()</p>
 <blockquote>
 <p>“Finally, the more threads you have running, the more context switching the operating system has to do. Each context switch takes time that could be spent doing useful work, so at some point adding an extra thread will actually reduce the overall application performance rather than increase it. For this reason, if you’re trying to achieve the best possible performance of the system, it’s necessary to adjust the number of threads running to take account of the available hardware concurrency (or lack of it).”</p>
+</blockquote>
+<p>Avoid the big hammer mutex</p>
+<blockquote>
+<p>“All these questions are guided by a single idea: how can you minimize the amount of serialization that must occur and enable the greatest amount of true concurrency?”</p>
 </blockquote>
 
       
