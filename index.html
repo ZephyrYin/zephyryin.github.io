@@ -160,7 +160,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/30/c++-concurrentcy-in-action/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/c++-concurrentcy-in-action/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.gif">
@@ -178,7 +178,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/30/c++-concurrentcy-in-action/" class="post-title-link" itemprop="url">C++ Concurrency in Action</a>
+          <a href="/2024/05/01/c++-concurrentcy-in-action/" class="post-title-link" itemprop="url">C++ Concurrency in Action</a>
         </h2>
 
         <div class="post-meta-container">
@@ -189,7 +189,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2024-04-30 23:01:03" itemprop="dateCreated datePublished" datetime="2024-04-30T23:01:03-07:00">2024-04-30</time>
+      <time title="Created: 2024-05-01 23:00:50" itemprop="dateCreated datePublished" datetime="2024-05-01T23:00:50-07:00">2024-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -233,6 +233,10 @@
 </blockquote>
 <p>Amdahl’s law<br><img src="/../uploads/Amdahls_law.png"></p>
 <p>“It’s important to measure performance before and after any change in the number of threads; the optimal number of threads will be highly dependent on the nature of the work being done and the percentage of time the thread spends waiting.”</p>
+<p>Always test your code on different architectures</p>
+<blockquote>
+<p>“Different processor architectures provide different synchronization and order- ing facilities. For example, on x86 and x86-64 architectures, atomic load operations are always the same, whether tagged memory_order_relaxed or memory_order_seq_cst. This means that code written using relaxed memory ordering may work on systems with an x86 architecture, where it would fail on a system with a finer- grained set of memory-ordering instructions such as SPARC.”</p>
+</blockquote>
 
       
     </div>

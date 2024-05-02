@@ -22,13 +22,13 @@
     <meta name="description" content="Don’t parallize short tasks  “Also, the performance gain might not be as large as expected; there’s an inherent overhead associated with launching a thread, because the OS has to allocate the associat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ Concurrency in Action">
-<meta property="og:url" content="http://example.com/2024/04/30/c++-concurrentcy-in-action/index.html">
+<meta property="og:url" content="http://example.com/2024/05/01/c++-concurrentcy-in-action/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Don’t parallize short tasks  “Also, the performance gain might not be as large as expected; there’s an inherent overhead associated with launching a thread, because the OS has to allocate the associat">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/uploads/Amdahls_law.png">
-<meta property="article:published_time" content="2024-05-01T06:01:03.972Z">
-<meta property="article:modified_time" content="2024-05-01T06:01:03.972Z">
+<meta property="article:published_time" content="2024-05-02T06:00:50.947Z">
+<meta property="article:modified_time" content="2024-05-02T06:00:50.947Z">
 <meta property="article:author" content="Zephyros">
 <meta property="article:tag" content="concurrency">
 <meta property="article:tag" content="multithreading">
@@ -36,11 +36,11 @@
 <meta name="twitter:image" content="http://example.com/uploads/Amdahls_law.png">
 
 
-<link rel="canonical" href="http://example.com/2024/04/30/c++-concurrentcy-in-action/">
+<link rel="canonical" href="http://example.com/2024/05/01/c++-concurrentcy-in-action/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/04/30/c++-concurrentcy-in-action/","path":"2024/04/30/c++-concurrentcy-in-action/","title":"C++ Concurrency in Action"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/05/01/c++-concurrentcy-in-action/","path":"2024/05/01/c++-concurrentcy-in-action/","title":"C++ Concurrency in Action"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>C++ Concurrency in Action | Hexo</title>
@@ -167,7 +167,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/30/c++-concurrentcy-in-action/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/c++-concurrentcy-in-action/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.gif">
@@ -196,7 +196,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2024-04-30 23:01:03" itemprop="dateCreated datePublished" datetime="2024-04-30T23:01:03-07:00">2024-04-30</time>
+      <time title="Created: 2024-05-01 23:00:50" itemprop="dateCreated datePublished" datetime="2024-05-01T23:00:50-07:00">2024-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,6 +239,10 @@
 </blockquote>
 <p>Amdahl’s law<br><img src="/../uploads/Amdahls_law.png"></p>
 <p>“It’s important to measure performance before and after any change in the number of threads; the optimal number of threads will be highly dependent on the nature of the work being done and the percentage of time the thread spends waiting.”</p>
+<p>Always test your code on different architectures</p>
+<blockquote>
+<p>“Different processor architectures provide different synchronization and order- ing facilities. For example, on x86 and x86-64 architectures, atomic load operations are always the same, whether tagged memory_order_relaxed or memory_order_seq_cst. This means that code written using relaxed memory ordering may work on systems with an x86 architecture, where it would fail on a system with a finer- grained set of memory-ordering instructions such as SPARC.”</p>
+</blockquote>
 
     </div>
 
