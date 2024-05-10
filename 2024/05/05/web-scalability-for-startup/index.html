@@ -19,16 +19,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="What is Scalability?  “Scalability is an ability to adjust the capacity of the system to cost-efficiently fulfill the demands. Scalability usually means an ability to handle more users, clients, data,">
+    <meta name="description" content="Core ConceptsWhat is Scalability?  “Scalability is an ability to adjust the capacity of the system to cost-efficiently fulfill the demands. Scalability usually means an ability to handle more users, c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web Scalability for Startup Engineers">
 <meta property="og:url" content="http://example.com/2024/05/05/web-scalability-for-startup/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="What is Scalability?  “Scalability is an ability to adjust the capacity of the system to cost-efficiently fulfill the demands. Scalability usually means an ability to handle more users, clients, data,">
+<meta property="og:description" content="Core ConceptsWhat is Scalability?  “Scalability is an ability to adjust the capacity of the system to cost-efficiently fulfill the demands. Scalability usually means an ability to handle more users, c">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/uploads/vertical_vs_horizontal.png">
 <meta property="article:published_time" content="2024-05-05T22:42:59.000Z">
-<meta property="article:modified_time" content="2024-05-06T06:33:11.790Z">
+<meta property="article:modified_time" content="2024-05-08T05:55:41.824Z">
 <meta property="article:author" content="Zephyros">
 <meta property="article:tag" content="scalability">
 <meta name="twitter:card" content="summary">
@@ -101,7 +101,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -114,6 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Core-Concepts"><span class="nav-number">1.</span> <span class="nav-text">Core Concepts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Principles-of-Good-Software-Design"><span class="nav-number">2.</span> <span class="nav-text">Principles of Good Software Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simplicity"><span class="nav-number">2.1.</span> <span class="nav-text">Simplicity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loose-Coupling"><span class="nav-number">2.2.</span> <span class="nav-text">Loose Coupling</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,9 +195,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-05-05 15:42:59 / Modified: 23:33:11" itemprop="dateCreated datePublished" datetime="2024-05-05T15:42:59-07:00">2024-05-05</time>
+      <time title="Created: 2024-05-05 15:42:59" itemprop="dateCreated datePublished" datetime="2024-05-05T15:42:59-07:00">2024-05-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-05-07 22:55:41" itemprop="dateModified" datetime="2024-05-07T22:55:41-07:00">2024-05-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -217,7 +224,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>What is Scalability?</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="Core-Concepts"><a href="#Core-Concepts" class="headerlink" title="Core Concepts"></a>Core Concepts</h1><p>What is Scalability?</p>
 <blockquote>
 <p>“Scalability is an ability to adjust the capacity of the system to cost-efficiently fulfill the demands. Scalability usually means an ability to handle more users, clients, data, transactions, or requests without affecting the user experience. It is important to remember that scalability should allow us to scale down as much as scale up and that scaling should be relatively cheap and quick to do.”</p>
 <ul>
@@ -255,6 +262,18 @@
 <p>Scaling horizontally: Adding more servers whenever necessary.</p>
 <p><img src="/../uploads/vertical_vs_horizontal.png"></p>
 <p>Round-robin DNS: Map a domain name to multiple IP addresses, so that the client traffic is directed to different web servers.<br>Geo DNS: allow domain names to be resolved to IP addresses based on the location of the customer.</p>
+<h1 id="Principles-of-Good-Software-Design"><a href="#Principles-of-Good-Software-Design" class="headerlink" title="Principles of Good Software Design"></a>Principles of Good Software Design</h1><h2 id="Simplicity"><a href="#Simplicity" class="headerlink" title="Simplicity"></a>Simplicity</h2><p>Make things as simple as possible, but no spipler.</p>
+<blockquote>
+<p>“Simplicity is not about using shortcuts and creating the quickest solution to the problem at hand. It is about what would be the easiest way for another software engineer to use your solution in the future.”<br>“Hidng complexity and building abstractions is one of the best ways to promote simplicity.”<br>“Good design allows you to add more details and features later on, but does not require you to build a massive solution up front. Beginning with a reasonable level of abstraction and iterating over it gives better results than trying to predit the future and build everything that might be needed later on.”</p>
+</blockquote>
+<h2 id="Loose-Coupling"><a href="#Loose-Coupling" class="headerlink" title="Loose Coupling"></a>Loose Coupling</h2><p>Loose coupling refers to a situation where different components know as little as nessary about each other</p>
+<blockquote>
+<ul>
+<li>“Low coupling would allow you to introduce changes without the risk of breaking other parts of the system.”</li>
+<li>“Low coupling promotes keeping complexity localized.”</li>
+<li>“Decoupling on a higher level can mean having multiple applications, with each one focused on a narrow functionality. Then they can be scaled separately depending on their needs.”</li>
+</ul>
+</blockquote>
 
     </div>
 
