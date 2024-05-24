@@ -28,7 +28,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/uploads/vertical_vs_horizontal.png">
 <meta property="article:published_time" content="2024-05-05T22:42:59.000Z">
-<meta property="article:modified_time" content="2024-05-08T05:55:41.824Z">
+<meta property="article:modified_time" content="2024-05-24T06:33:19.452Z">
 <meta property="article:author" content="Zephyros">
 <meta property="article:tag" content="scalability">
 <meta name="twitter:card" content="summary">
@@ -114,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Core-Concepts"><span class="nav-number">1.</span> <span class="nav-text">Core Concepts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Principles-of-Good-Software-Design"><span class="nav-number">2.</span> <span class="nav-text">Principles of Good Software Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simplicity"><span class="nav-number">2.1.</span> <span class="nav-text">Simplicity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loose-Coupling"><span class="nav-number">2.2.</span> <span class="nav-text">Loose Coupling</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Core-Concepts"><span class="nav-number">1.</span> <span class="nav-text">Core Concepts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Principles-of-Good-Software-Design"><span class="nav-number">2.</span> <span class="nav-text">Principles of Good Software Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simplicity"><span class="nav-number">2.1.</span> <span class="nav-text">Simplicity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loose-Coupling"><span class="nav-number">2.2.</span> <span class="nav-text">Loose Coupling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling"><span class="nav-number">2.3.</span> <span class="nav-text">Auto-Scaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-first"><span class="nav-number">2.4.</span> <span class="nav-text">API-first</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,7 +203,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-05-07 22:55:41" itemprop="dateModified" datetime="2024-05-07T22:55:41-07:00">2024-05-07</time>
+      <time title="Modified: 2024-05-23 23:33:19" itemprop="dateModified" datetime="2024-05-23T23:33:19-07:00">2024-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -271,9 +271,13 @@
 <ul>
 <li>“Low coupling would allow you to introduce changes without the risk of breaking other parts of the system.”</li>
 <li>“Low coupling promotes keeping complexity localized.”</li>
-<li>“Decoupling on a higher level can mean having multiple applications, with each one focused on a narrow functionality. Then they can be scaled separately depending on their needs.”</li>
+<li>“Decoupling on a higher level can mean having multiple applications, with each one focused on a narrow functionality. Then they can be scaled separately depending on their needs.”<br>KeepDeclare as many methods as private&#x2F;protected as possible.<br>“Hiding details from outside world is a great way to reduce coupling and promote simplicity. Private methods are easier to be refactored, as the complexity is localized and you don’t need to search far to find out what could potentially break.”</li>
 </ul>
 </blockquote>
+<h2 id="Auto-Scaling"><a href="#Auto-Scaling" class="headerlink" title="Auto-Scaling"></a>Auto-Scaling</h2><blockquote>
+<p>“Scalability is not just about scaling out, it is also about the ability to scale down, mainly to save cost.”</p>
+</blockquote>
+<h2 id="API-first"><a href="#API-first" class="headerlink" title="API-first"></a>API-first</h2><p>Priotize APIs as first class citizens, build your product around APIs. create a layer of web services that encapsulates most of the business logic and hides the complexcity behind a single API contract. Dedupe implementation for different clients(web, mobile…).</p>
 
     </div>
 
