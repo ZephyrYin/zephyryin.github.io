@@ -27,7 +27,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/uploads/vertical_vs_horizontal.png">
 <meta property="article:published_time" content="2024-05-05T22:42:59.000Z">
-<meta property="article:modified_time" content="2024-06-07T05:05:53.736Z">
+<meta property="article:modified_time" content="2024-06-07T07:05:03.220Z">
 <meta property="article:author" content="Zephyros">
 <meta property="article:tag" content="scalability">
 <meta name="twitter:card" content="summary">
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Core-Concepts"><span class="nav-number">1.</span> <span class="nav-text">Core Concepts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Principles-of-Good-Software-Design"><span class="nav-number">2.</span> <span class="nav-text">Principles of Good Software Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simplicity"><span class="nav-number">2.1.</span> <span class="nav-text">Simplicity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loose-Coupling"><span class="nav-number">2.2.</span> <span class="nav-text">Loose Coupling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling"><span class="nav-number">2.3.</span> <span class="nav-text">Auto-Scaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-first"><span class="nav-number">2.4.</span> <span class="nav-text">API-first</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-layer"><span class="nav-number">3.</span> <span class="nav-text">Data layer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Replication"><span class="nav-number">3.1.</span> <span class="nav-text">Replication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ACID"><span class="nav-number">3.2.</span> <span class="nav-text">ACID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAP"><span class="nav-number">3.3.</span> <span class="nav-text">CAP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eventually-consistency"><span class="nav-number">3.4.</span> <span class="nav-text">Eventually consistency</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Core-Concepts"><span class="nav-number">1.</span> <span class="nav-text">Core Concepts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Principles-of-Good-Software-Design"><span class="nav-number">2.</span> <span class="nav-text">Principles of Good Software Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simplicity"><span class="nav-number">2.1.</span> <span class="nav-text">Simplicity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loose-Coupling"><span class="nav-number">2.2.</span> <span class="nav-text">Loose Coupling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling"><span class="nav-number">2.3.</span> <span class="nav-text">Auto-Scaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-first"><span class="nav-number">2.4.</span> <span class="nav-text">API-first</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-layer"><span class="nav-number">3.</span> <span class="nav-text">Data layer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Replication"><span class="nav-number">3.1.</span> <span class="nav-text">Replication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Partitioning-Sharding"><span class="nav-number">3.2.</span> <span class="nav-text">Data Partitioning (Sharding)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ACID"><span class="nav-number">3.3.</span> <span class="nav-text">ACID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAP"><span class="nav-number">3.4.</span> <span class="nav-text">CAP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eventually-consistency"><span class="nav-number">3.5.</span> <span class="nav-text">Eventually consistency</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quorum-consistency"><span class="nav-number">3.6.</span> <span class="nav-text">Quorum consistency</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functional-partition"><span class="nav-number">3.7.</span> <span class="nav-text">Functional partition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Normalization"><span class="nav-number">3.8.</span> <span class="nav-text">Data Normalization</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,7 +202,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-06-06 22:05:53" itemprop="dateModified" datetime="2024-06-06T22:05:53-07:00">2024-06-06</time>
+      <time title="Modified: 2024-06-07 00:05:03" itemprop="dateModified" datetime="2024-06-07T00:05:03-07:00">2024-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -278,8 +278,21 @@
 </blockquote>
 <h2 id="API-first"><a href="#API-first" class="headerlink" title="API-first"></a>API-first</h2><p>Priotize APIs as first class citizens, build your product around APIs. create a layer of web services that encapsulates most of the business logic and hides the complexcity behind a single API contract. Dedupe implementation for different clients(web, mobile…).</p>
 <h1 id="Data-layer"><a href="#Data-layer" class="headerlink" title="Data layer"></a>Data layer</h1><h2 id="Replication"><a href="#Replication" class="headerlink" title="Replication"></a>Replication</h2><blockquote>
-<p>“Replication usually refers to a mechanism that allows you to have multiple copies of the same data stored on different machines. Client can connect to a slave to read, while mutations can only through the master server.”</p>
+<p>“Replication usually refers to a mechanism that allows you to have multiple copies of the same data stored on different machines. one of the servers is called a master and the rest are slaves. Client can connect to a slave to read, while mutations can only through the master server.”</p>
 </blockquote>
+<h2 id="Data-Partitioning-Sharding"><a href="#Data-Partitioning-Sharding" class="headerlink" title="Data Partitioning (Sharding)"></a>Data Partitioning (Sharding)</h2><blockquote>
+<p>“Divide the data set into smaller pieces so that it could be distributed across multiple machines and so that none of the servers would need to deal with the entire data set. A Sharding key is the information that is used to decide which server is responsible for the data that you are looking for.”</p>
+</blockquote>
+<p>Advantages of sharding</p>
+<ul>
+<li>It allows you to scale your database servers horizontally to almost any size.</li>
+<li>It allows you to scale your database servers horizontally to almost any size.</li>
+</ul>
+<p>Challenges of sharding</p>
+<ul>
+<li>Cannot execute queries spanning multiple shards. Any time you want to run such a query, you need to execute parts of it on each shard and then somehow merge the results in the application layer.</li>
+<li>Lose the ACID properties of your database as a whole.</li>
+</ul>
 <h2 id="ACID"><a href="#ACID" class="headerlink" title="ACID"></a>ACID</h2><p>The term ACID transaction refers to a set of transaction properties supported by most relational database engies.</p>
 <ul>
 <li><strong>Atomic</strong>: An atomic transaction is executed in its entirely, it’s either completes or is rejected and reverted.</li>
@@ -297,6 +310,16 @@
 <ul>
 <li>“Eventual consistency is a property of a system where different nodes may have different versions of the data, but where state changes eventually propagate to all of the servers. If you ask two servers for the same data at the same time in a global consistent system, it’s guaranteed to get the same result, while in a eventually consistent system, it’s not.”</li>
 </ul>
+</blockquote>
+<h2 id="Quorum-consistency"><a href="#Quorum-consistency" class="headerlink" title="Quorum consistency"></a>Quorum consistency</h2><p>Given n replicas, the sum of number of nodes to read and number of nodes to write should be greater than n to guarentee the read result is up to date. The number or R and number of W can be adjusted depending on the system is read-heavy or write-heavy.</p>
+<p align="center"> R + W > N </p>
+
+<blockquote>
+<p>“Quorum consistency means the majority of the replicas agree on the result. When you write using quorum consistency, the majority of the servers need to confirm that they have persisted your change. Reading using a quorum, on the other hand, means that the majority of the replicas need to respond so that the most up-to-date copy of the data can be found and returned to the client.”</p>
+</blockquote>
+<h2 id="Functional-partition"><a href="#Functional-partition" class="headerlink" title="Functional partition"></a>Functional partition</h2><p>Dividing monolith system into multiple decoupled service, and scale them independently.</p>
+<h2 id="Data-Normalization"><a href="#Data-Normalization" class="headerlink" title="Data Normalization"></a>Data Normalization</h2><blockquote>
+<p>“Data normalization is a process of structuring data so that it is broken into separate tables. As part of the normalization process, people would usually break data down into separate fields, make sure that each row could be identified by a primary key, and that rows in different tables would reference each other rather than having copies of the same information. Having data in such a form reduces the data size, as there is less redundancy. It also allows for better indexing and searching because data is segregated and smaller in size. Normalization also increases data integrity, as anytime an application needs to update existing data, it only needs to update it in one place (other rows can reference this data, but they would not contain copies of it).”</p>
 </blockquote>
 
     </div>
