@@ -572,9 +572,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-06-19 14:54:04 / Modified: 15:16:39" itemprop="dateCreated datePublished" datetime="2024-06-19T14:54:04-07:00">2024-06-19</time>
+      <time title="Created: 2024-06-19 14:54:04" itemprop="dateCreated datePublished" datetime="2024-06-19T14:54:04-07:00">2024-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-07-01 22:51:52" itemprop="dateModified" datetime="2024-07-01T22:51:52-07:00">2024-07-01</time>
     </span>
 
   
@@ -592,18 +598,15 @@
 <li><strong>Evenly divided grid</strong>: The businesses are not evenly distributed.</li>
 <li><strong>GeoHash</strong>: reducd two-dimensional data into a one-dimensional string of letters and digits. <ul>
 <li>Boundary issue: two place can be quite close but share no common prefix, or fall into different geohashes.</li>
-<li>Not enough businesses: need to increase search radius.</li>
-</ul>
-</li>
-<li><strong>Quadtree</strong>: Split the node recursively until number of businesses reached threshold.<ul>
-<li>The quadtree can easily fit in one server while we should spread it across multiple servers since a single server might not have enough CPU or netowrk bandwidth to serve all read requests.</li>
-<li>Rillout new release of the server incrementally to a small subset of servers at a time to avoid taking a large swath of the server cluster offline and causes service brownout.</li>
-<li>when add&#x2F;remove new businesses, incrementally rebuid the quadree.</li>
-</ul>
-</li>
-<li><strong>Google S2</strong> Map a sphere to a 1D index based on the Hilbert curve. Two pointes that are close to each other on the Hilbert curve are close in 1D space.</li>
-</ul>
-
+<li>Not enough businesses: need to increase search radius.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/06/19/system-design/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

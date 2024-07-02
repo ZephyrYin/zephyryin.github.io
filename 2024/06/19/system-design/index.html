@@ -26,7 +26,7 @@
 <meta property="og:description" content="Location-based service(LBS)Algorithms to fetch nearby businesses Two-dimensional search: latitude and longitude, every inefficient. Evenly divided grid: The businesses are not evenly distributed. GeoH">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-19T21:54:04.000Z">
-<meta property="article:modified_time" content="2024-06-19T22:16:39.579Z">
+<meta property="article:modified_time" content="2024-07-02T05:51:52.766Z">
 <meta property="article:author" content="Zephyros">
 <meta name="twitter:card" content="summary">
 
@@ -110,7 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Location-based-service-LBS"><span class="nav-number">1.</span> <span class="nav-text">Location-based service(LBS)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithms-to-fetch-nearby-businesses"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithms to fetch nearby businesses</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Location-based-service-LBS"><span class="nav-number">1.</span> <span class="nav-text">Location-based service(LBS)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithms-to-fetch-nearby-businesses"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithms to fetch nearby businesses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handle-real-time-nearby-friends"><span class="nav-number">1.2.</span> <span class="nav-text">Handle real-time nearby friends</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,9 +191,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-06-19 14:54:04 / Modified: 15:16:39" itemprop="dateCreated datePublished" datetime="2024-06-19T14:54:04-07:00">2024-06-19</time>
+      <time title="Created: 2024-06-19 14:54:04" itemprop="dateCreated datePublished" datetime="2024-06-19T14:54:04-07:00">2024-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-07-01 22:51:52" itemprop="dateModified" datetime="2024-07-01T22:51:52-07:00">2024-07-01</time>
     </span>
 
   
@@ -210,7 +216,7 @@
 <li><strong>Evenly divided grid</strong>: The businesses are not evenly distributed.</li>
 <li><strong>GeoHash</strong>: reducd two-dimensional data into a one-dimensional string of letters and digits. <ul>
 <li>Boundary issue: two place can be quite close but share no common prefix, or fall into different geohashes.</li>
-<li>Not enough businesses: need to increase search radius.</li>
+<li>Not enough businesses: need to increase search radius.<span id="more"></span></li>
 </ul>
 </li>
 <li><strong>Quadtree</strong>: Split the node recursively until number of businesses reached threshold.<ul>
@@ -221,6 +227,7 @@
 </li>
 <li><strong>Google S2</strong> Map a sphere to a 1D index based on the Hilbert curve. Two pointes that are close to each other on the Hilbert curve are close in 1D space.</li>
 </ul>
+<h2 id="Handle-real-time-nearby-friends"><a href="#Handle-real-time-nearby-friends" class="headerlink" title="Handle real-time nearby friends"></a>Handle real-time nearby friends</h2><p>Redist Pub&#x2F;Sub is a very lightweight message bus. Location updates received via the WebSocket server are published to the user’s own channel in the Redis Pub&#x2F;Sub server. A dedicated WebSocket connection handler for each active friend subscribes to the channel. When there is a location update, the WebSocket handler function gets invoked and for each active friend, the function recomputes the distance. If the new distance is within the search radius, the new location and timestamp are sent via the WebSocket connection to the friend’s client.</p>
 
     </div>
 
