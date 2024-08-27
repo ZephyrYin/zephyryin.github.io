@@ -18,15 +18,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Location-based service(LBS)Algorithms to fetch nearby businesses Two-dimensional search: latitude and longitude, every inefficient. Evenly divided grid: The businesses are not evenly distributed. GeoH">
+    <meta name="description" content="Location-based service(LBS)Algorithms to fetch nearby businesses Two-dimensional search: latitude and longitude, every inefficient. Evenly divided grid: The businesses are not evenly distributed. GeoC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="system-design">
 <meta property="og:url" content="http://example.com/2024/06/19/system-design/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Location-based service(LBS)Algorithms to fetch nearby businesses Two-dimensional search: latitude and longitude, every inefficient. Evenly divided grid: The businesses are not evenly distributed. GeoH">
+<meta property="og:description" content="Location-based service(LBS)Algorithms to fetch nearby businesses Two-dimensional search: latitude and longitude, every inefficient. Evenly divided grid: The businesses are not evenly distributed. GeoC">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-19T21:54:04.000Z">
-<meta property="article:modified_time" content="2024-07-02T05:51:52.766Z">
+<meta property="article:modified_time" content="2024-08-27T05:14:37.378Z">
 <meta property="article:author" content="Zephyros">
 <meta name="twitter:card" content="summary">
 
@@ -110,7 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Location-based-service-LBS"><span class="nav-number">1.</span> <span class="nav-text">Location-based service(LBS)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithms-to-fetch-nearby-businesses"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithms to fetch nearby businesses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handle-real-time-nearby-friends"><span class="nav-number">1.2.</span> <span class="nav-text">Handle real-time nearby friends</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Location-based-service-LBS"><span class="nav-number">1.</span> <span class="nav-text">Location-based service(LBS)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithms-to-fetch-nearby-businesses"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithms to fetch nearby businesses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handle-real-time-nearby-friends"><span class="nav-number">1.2.</span> <span class="nav-text">Handle real-time nearby friends</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map-System"><span class="nav-number">1.3.</span> <span class="nav-text">Map System</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -199,7 +199,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-07-01 22:51:52" itemprop="dateModified" datetime="2024-07-01T22:51:52-07:00">2024-07-01</time>
+      <time title="Modified: 2024-08-26 22:14:37" itemprop="dateModified" datetime="2024-08-26T22:14:37-07:00">2024-08-26</time>
     </span>
 
   
@@ -214,7 +214,8 @@
     <div class="post-body" itemprop="articleBody"><h1 id="Location-based-service-LBS"><a href="#Location-based-service-LBS" class="headerlink" title="Location-based service(LBS)"></a>Location-based service(LBS)</h1><h2 id="Algorithms-to-fetch-nearby-businesses"><a href="#Algorithms-to-fetch-nearby-businesses" class="headerlink" title="Algorithms to fetch nearby businesses"></a>Algorithms to fetch nearby businesses</h2><ul>
 <li><strong>Two-dimensional search</strong>: latitude and longitude, every inefficient.</li>
 <li><strong>Evenly divided grid</strong>: The businesses are not evenly distributed.</li>
-<li><strong>GeoHash</strong>: reducd two-dimensional data into a one-dimensional string of letters and digits. <ul>
+<li><strong>GeoCoding</strong>: converting addresses to geographic coordinates(latitude&amp;longitude pair), decoding is the reverse process.</li>
+<li><strong>GeoHash</strong>: reducd two-dimensional data into a one-dimensional string of letters and digits. It depicts the earth as a flattened surface and recursively devides the grids into sub-grids, which can be sequare or rectangular.<ul>
 <li>Boundary issue: two place can be quite close but share no common prefix, or fall into different geohashes.</li>
 <li>Not enough businesses: need to increase search radius.<span id="more"></span></li>
 </ul>
@@ -228,7 +229,7 @@
 <li><strong>Google S2</strong> Map a sphere to a 1D index based on the Hilbert curve. Two pointes that are close to each other on the Hilbert curve are close in 1D space.</li>
 </ul>
 <h2 id="Handle-real-time-nearby-friends"><a href="#Handle-real-time-nearby-friends" class="headerlink" title="Handle real-time nearby friends"></a>Handle real-time nearby friends</h2><p>Redist Pub&#x2F;Sub is a very lightweight message bus. Location updates received via the WebSocket server are published to the user’s own channel in the Redis Pub&#x2F;Sub server. A dedicated WebSocket connection handler for each active friend subscribes to the channel. When there is a location update, the WebSocket handler function gets invoked and for each active friend, the function recomputes the distance. If the new distance is within the search radius, the new location and timestamp are sent via the WebSocket connection to the friend’s client.</p>
-
+<h2 id="Map-System"><a href="#Map-System" class="headerlink" title="Map System"></a>Map System</h2>
     </div>
 
     
